@@ -20,6 +20,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  'GET /api/v1/grado/show': { action: 'grado/show' },
   'POST /api/v1/grado/create': { action: 'grado/create' }
 
   /***************************************************************************
