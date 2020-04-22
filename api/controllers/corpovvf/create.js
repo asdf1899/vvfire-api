@@ -1,13 +1,13 @@
-/**
- * Corpovvf.js
- *
- * @description :: A model definition represents a database table/collection.
- * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
- */
-
 module.exports = {
 
-  attributes: {
+
+  friendlyName: 'Create',
+
+
+  description: 'Create corpovvf.',
+
+
+  inputs: {
     name: {
       type: 'string',
       required: true,
@@ -29,11 +29,25 @@ module.exports = {
       type: 'string',
       required: true,
       allowNull: false
-    },
-    vigili:{
-      collection: 'vigile',
-      via: 'fkCorpovvf'
     }
-  }
-};
+  },
 
+
+  exits: {
+
+  },
+
+
+  fn: async function (inputs) {
+    var newCorpo = await Corpovvf.create({
+      'name': inputs.name,
+      'phone': inputs.phone,
+      'email': inputs.email,
+      'password': inputs.password,
+    });
+    return newCorpo;
+
+  }
+
+
+};

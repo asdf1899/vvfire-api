@@ -49,6 +49,11 @@ module.exports = {
       type: 'number',
       required: true,
       allowNull: false
+    },
+    fkCorpovvf:{
+      type: 'number',
+      required: true,
+      allowNull: false
     }
   },
 
@@ -68,6 +73,7 @@ module.exports = {
       'email': inputs.email,
       'password': inputs.password,
       'fkGrado': inputs.fkGrado,
+      'fkCorpovvf': inputs.fkCorpovvf,
     });
     return newVigile;
   }

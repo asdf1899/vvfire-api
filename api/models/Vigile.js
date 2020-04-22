@@ -47,6 +47,9 @@ module.exports = {
     },
     fkGrado:{
       model: 'Grado'
+    },
+    fkCorpovvf:{
+      model: 'Corpovvf'
     }
   },
 
