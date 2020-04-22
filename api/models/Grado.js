@@ -12,6 +12,10 @@ module.exports = {
       type: 'string',
       required: true,
       allowNull: false
+    },
+    vigili:{
+      collection: 'vigile',
+      via: 'fkGrado'
     }
   },
 

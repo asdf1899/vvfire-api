@@ -24,6 +24,16 @@ module.exports = {
       required: true,
       allowNull: false
     },
+    autista:{
+      type: 'boolean',
+      required: true,
+      allowNull: false
+    },
+    admin:{
+      type: 'boolean',
+      defaultsTo: false,
+      allowNull: false
+    },
     email:{
       type: 'string',
       required: true,
@@ -34,6 +44,9 @@ module.exports = {
       type: 'string',
       required: true,
       allowNull: false
+    },
+    fkGrado:{
+      model: 'Grado'
     }
   },
 
