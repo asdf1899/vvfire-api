@@ -1,5 +1,5 @@
 /**
- * Corpovvf.js
+ * Vigile.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -13,10 +13,15 @@ module.exports = {
       required: true,
       allowNull: false
     },
+    surname: {
+      type: 'string',
+      required: true,
+      allowNull: false
+    },
     phone:{
       type: 'number',
-      required: true,
       unique: true,
+      required: true,
       allowNull: false
     },
     email:{
@@ -30,6 +35,7 @@ module.exports = {
       required: true,
       allowNull: false
     }
-  }
+  },
+
 };
 
