@@ -21,8 +21,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'GET /api/v1/grado/show': { action: 'grado/show' },
-  'POST /api/v1/grado/create': { action: 'grado/create' }
-
+  'POST /api/v1/grado/create': { action: 'grado/create' },
+  'DELETE /api/v1/grado/delete': { action: 'grado/delete' }
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
