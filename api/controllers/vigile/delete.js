@@ -4,11 +4,11 @@ module.exports = {
   friendlyName: 'Delete',
 
 
-  description: 'Delete grado.',
+  description: 'Delete vigile.',
 
 
   inputs: {
-    idGrado: {
+    id: {
       type: 'number',
       required: true
     }
@@ -21,7 +21,7 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    const record = await Grado.destroy({id: inputs.idGrado}).fetch();
+    const record = await Vigile.destroy({id: inputs.id}).fetch();
     if (record === 0){
       throw({invalid: {error: 'Record doesn\'t exist'}});
     }
