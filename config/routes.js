@@ -20,11 +20,14 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  // GRADO
   'GET /api/v1/grado/show': { action: 'grado/show' },
   'POST /api/v1/grado/create': { action: 'grado/create' },
   'DELETE /api/v1/grado/delete': { action: 'grado/delete' },
+  // VIGILE
   'GET /api/v1/vigile/show': { action: 'vigile/show' },
   'POST /api/v1/vigile/create': { action: 'vigile/create' },
+  'PATCH /api/v1/vigile/update': { action: 'vigile/update' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
