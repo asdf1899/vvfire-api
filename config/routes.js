@@ -21,6 +21,7 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   // CORPO VVF
+  'GET /api/v1/corpovvf/show': { action: 'corpovvf/show' },
   'POST /api/v1/corpovvf/create': { action: 'corpovvf/create' },
   // GRADO
   'GET /api/v1/grado/show': { action: 'grado/show' },
