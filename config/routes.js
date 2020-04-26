@@ -23,6 +23,8 @@ module.exports.routes = {
   // CORPO VVF
   'GET /api/v1/corpovvf/show': { action: 'corpovvf/show' },
   'POST /api/v1/corpovvf/create': { action: 'corpovvf/create' },
+  'PATCH /api/v1/corpovvf/update': { action: 'corpovvf/update' },
+  'DELETE /api/v1/corpovvf/delete': { action: 'corpovvf/delete' },
   // GRADO
   'GET /api/v1/grado/show': { action: 'grado/show' },
   'POST /api/v1/grado/create': { action: 'grado/create' },
