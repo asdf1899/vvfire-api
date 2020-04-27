@@ -1,6 +1,6 @@
 # vvfire-api
 
-a [Sails v1](https://sailsjs.com) application
+a [Sails](https://sailsjs.com) rest api.
 
 
 ### Links
@@ -14,7 +14,7 @@ a [Sails v1](https://sailsjs.com) application
 
 ### Version info
 
-This app was originally generated on Tue Apr 21 2020 18:32:05 GMT+0200 (GMT+02:00) using Sails v1.2.4.
+Using Sails v1.2.4.
 
 <!-- Internally, Sails used [`sails-generate@1.16.13`](https://github.com/balderdashy/sails-generate/tree/v1.16.13/lib/core-generators/new). -->
 
