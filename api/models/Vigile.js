@@ -54,6 +54,10 @@ module.exports = {
     disponibilità: {
       collection: 'Disponibilita',
       via: 'fkVigile'
+    },
+    ricercaPersona: {
+      collection: 'RicercaPersona',
+      via: 'fkVigile'
     }
   },
 
