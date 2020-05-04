@@ -50,6 +50,10 @@ module.exports = {
     },
     fkCorpovvf:{
       model: 'Corpovvf'
+    },
+    disponibilità: {
+      collection: 'Disponibilita',
+      via: 'fkVigile'
     }
   },
 

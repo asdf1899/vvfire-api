@@ -8,7 +8,27 @@
 module.exports = {
 
   attributes: {
-
+    date: {
+      type: 'string',
+      columnType: 'datetime',
+      required: true,
+      allowNull: false
+    },
+    startTime: {
+      type: 'string',
+      columnType: 'datetime',
+      required: true,
+      allowNull: false
+    },
+    endTime: {
+      type: 'string',
+      columnType: 'datetime',
+      required: true,
+      allowNull: false
+    },
+    fkVigile: {
+      model: 'Vigile'
+    }
   },
 
 };
