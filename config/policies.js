@@ -18,5 +18,9 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
-
+  '*': ['isAuthorized'], // Everything resctricted here
+  'corpovvf': {
+    'create': true//, // We dont need authorization here, allowing public access
+    //'login': true // We dont need authorization here, allowing public access
+  }
 };
