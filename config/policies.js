@@ -17,10 +17,10 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+  // '*': true,rou
   '*': ['isAuthorized'], // Everything resctricted here
   'corpovvf': {
-    'create': true//, // We dont need authorization here, allowing public access
-    //'login': true // We dont need authorization here, allowing public access
+    'create': true,//, // We dont need authorization here, allowing public access
+    'login': true // We dont need authorization here, allowing public access
   }
 };
