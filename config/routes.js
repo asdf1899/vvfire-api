@@ -26,6 +26,7 @@ module.exports.routes = {
   'PATCH /api/v1/corpovvf/update': { action: 'corpovvf/update' },
   'DELETE /api/v1/corpovvf/delete': { action: 'corpovvf/delete' },
   'POST /api/v1/corpovvf/login': { action: 'corpovvf/login' },
+  'POST /api/v1/corpovvf/find-by-email': { action: 'corpovvf/find-by-email' },
   // GRADO
   'GET /api/v1/grado/show': { action: 'grado/show' },
   'POST /api/v1/grado/create': { action: 'grado/create' },
