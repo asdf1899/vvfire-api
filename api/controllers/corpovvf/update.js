@@ -8,6 +8,9 @@ module.exports = {
 
 
   inputs: {
+    id: {
+      type: 'number'
+    },
     name: {
       type: 'string',
       required: true,
@@ -29,7 +32,7 @@ module.exports = {
       type: 'string',
       required: true,
       allowNull: false
-    } 
+    }
   },
 
 
@@ -46,7 +49,10 @@ module.exports = {
       'email': inputs.email,
       'password': inputs.password,
     });
-    return update;
+    if (update === null || update === undefined){
+      return [{error: '404', message: 'Not Found'}];
+    }
+    return [{corpovvf: update, error: false}];
   }
 
 
