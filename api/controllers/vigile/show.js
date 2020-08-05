@@ -4,11 +4,13 @@ module.exports = {
   friendlyName: 'Show',
 
 
-  description: 'Show vigile.',
+  description: 'Show vigili.',
 
 
   inputs: {
-
+    idcorpo: {
+      type: 'number'
+    }
   },
 
 
@@ -17,9 +19,14 @@ module.exports = {
   },
 
 
-  fn: async function () {
-    let vigili = await Vigile.find();
-    return vigili;
+  fn: async function (inputs) {
+    let vigili = await Vigile.find({
+      where: {fkCorpovvf: inputs.idcorpo}
+    });
+    if (vigili === null || vigili === undefined || vigili === false){
+      return [{error: '404', message: 'Not Found'}];
+    }
+    return [{vigili: vigili, error: false}];
   }
 
 
