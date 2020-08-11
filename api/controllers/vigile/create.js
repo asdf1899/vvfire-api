@@ -64,7 +64,7 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    var newVigile = await Vigile.create({
+    await Vigile.create({
       'name': inputs.name,
       'surname': inputs.surname,
       'phone': inputs.phone,
@@ -75,7 +75,7 @@ module.exports = {
       'fkGrado': inputs.fkGrado,
       'fkCorpovvf': inputs.fkCorpovvf,
     });
-    return newVigile;
+    return [{error: false}];
   }
 
 
