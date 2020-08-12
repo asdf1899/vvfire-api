@@ -32,6 +32,7 @@ module.exports.routes = {
   'POST /api/v1/grado/create': { action: 'grado/create' },
   'PATCH /api/v1/grado/update': { action: 'grado/update' },
   'DELETE /api/v1/grado/delete': { action: 'grado/delete' },
+  'POST /api/v1/grado/find-by-id': { action: 'grado/find-by-id' },
   // VIGILE
   'POST /api/v1/vigile/show': { action: 'vigile/show' },
   'POST /api/v1/vigile/create': { action: 'vigile/create' },
