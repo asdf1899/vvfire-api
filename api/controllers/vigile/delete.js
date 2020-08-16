@@ -11,6 +11,10 @@ module.exports = {
     id: {
       type: 'number',
       required: true
+    },
+    fkCorpovvf: {
+      type: 'number',
+      required: true
     }
   },
 
@@ -21,11 +25,18 @@ module.exports = {
 
 
   fn: async function (inputs) {
+    var vigile = await Vigile.findOne({id: inputs.id});
+    if (vigile === null || vigile === undefined || vigile === false){
+      return [{error: '404', message: 'Not found'}];
+    }
+    if (inputs.fkCorpovvf !== vigile.fkCorpovvf){
+      return [{error: '401', message: 'Unauthorized'}];
+    }
     const record = await Vigile.destroy({id: inputs.id}).fetch();
     if (record === 0){
-      throw({invalid: {error: 'Record doesn\'t exist'}});
+      return {error: true};
     }
-    return {status: 'OK'};
+    return {error: false};
   }
 
 
