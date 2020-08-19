@@ -39,6 +39,8 @@ module.exports.routes = {
   'PATCH /api/v1/vigile/update': { action: 'vigile/update' },
   'DELETE /api/v1/vigile/delete': { action: 'vigile/delete' },
   'POST /api/v1/vigile/find-by-id': { action: 'vigile/find-by-id' },
+  // DISPONIBILITA
+  'POST /api/v1/disponibilita/create': { action: 'disponibilita/create' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
