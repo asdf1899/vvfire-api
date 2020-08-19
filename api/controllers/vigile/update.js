@@ -35,28 +35,13 @@ module.exports = {
       required: true,
       allowNull: false
     },
-    admin:{
-      type: 'boolean',
-      defaultsTo: false,
-      allowNull: false
-    },
     email:{
       type: 'string',
       required: true,
       unique: true,
       allowNull: false
     },
-    password:{
-      type: 'string',
-      required: true,
-      allowNull: false
-    },
     fkGrado:{
-      type: 'number',
-      required: true,
-      allowNull: false
-    },
-    fkCorpovvf:{
       type: 'number',
       required: true,
       allowNull: false
@@ -76,13 +61,13 @@ module.exports = {
       'surname': inputs.surname,
       'phone': inputs.phone,
       'autista': inputs.autista,
-      'admin': inputs.admin,
       'email': inputs.email,
-      'password': inputs.password,
-      'fkGrado': inputs.fkGrado,
-      'fkCorpovvf': inputs.fkCorpovvf,
+      'fkGrado': inputs.fkGrado
     });
-    return updatedVigile;
+    if (updatedVigile === null || updatedVigile === undefined){
+      return [{error: '404', message: 'Not Found'}];
+    }
+    return [{vigile: updatedVigile, error: false}];
   }
 
 
