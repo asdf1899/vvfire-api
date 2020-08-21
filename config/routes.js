@@ -41,6 +41,7 @@ module.exports.routes = {
   'POST /api/v1/vigile/find-by-id': { action: 'vigile/find-by-id' },
   // DISPONIBILITA
   'POST /api/v1/disponibilita/create': { action: 'disponibilita/create' },
+  'POST /api/v1/disponibilita/show': { action: 'disponibilita/show' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
