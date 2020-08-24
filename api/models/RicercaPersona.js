@@ -8,6 +8,11 @@
 module.exports = {
 
   attributes: {
+    name: {
+      type: 'string',
+      required: true,
+      allowNull: false
+    },
     startTime: {
       type: 'string',
       columnType: 'datetime',
@@ -20,8 +25,10 @@ module.exports = {
       required: true,
       allowNull: false
     },
-    fkVigile: {
-      model: 'Vigile'
+    completed:{
+      type: 'boolean',
+      defaultsTo: false,
+      allowNull: false
     },
     posizione: {
       collection: 'Posizioni',

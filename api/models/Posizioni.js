@@ -26,6 +26,9 @@ module.exports = {
       required: true,
       allowNull: false
     },
+    fkVigile: {
+      model: 'Vigile'
+    },
     fkRicerca: {
       model: 'RicercaPersona'
     }
