@@ -33,6 +33,9 @@ module.exports = {
     posizione: {
       collection: 'Posizioni',
       via: 'fkRicerca'
+    },
+    fkCorpovvf:{
+      model: 'Corpovvf'
     }
   },
 

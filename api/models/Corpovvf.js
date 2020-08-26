@@ -33,6 +33,10 @@ module.exports = {
     vigili:{
       collection: 'vigile',
       via: 'fkCorpovvf'
+    },
+    ricercapersona:{
+      collection: 'ricercapersona',
+      via: 'fkCorpovvf'
     }
   }
 };
