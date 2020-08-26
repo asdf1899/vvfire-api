@@ -42,6 +42,8 @@ module.exports.routes = {
   // DISPONIBILITA
   'POST /api/v1/disponibilita/create': { action: 'disponibilita/create' },
   'POST /api/v1/disponibilita/show': { action: 'disponibilita/show' },
+  // RICERCA PERSONA
+  'GET /ricercapersona/show': { action: 'ricercapersona/show' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
