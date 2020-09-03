@@ -16,14 +16,12 @@ module.exports = {
     startTime: {
       type: 'string',
       columnType: 'datetime',
-      required: true,
-      allowNull: false
+      required: true
     },
     endTime: {
       type: 'string',
       columnType: 'datetime',
-      required: true,
-      allowNull: false
+      required: true
     },
     completed:{
       type: 'boolean',
