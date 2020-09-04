@@ -14,7 +14,7 @@ module.exports = {
       allowNull: false
     },
     phone:{
-      type: 'number',
+      type: 'string',
       required: true,
       unique: true,
       allowNull: false
