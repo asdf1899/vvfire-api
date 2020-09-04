@@ -45,6 +45,7 @@ module.exports.routes = {
   // RICERCA PERSONA
   'POST /api/v1/ricercapersona/show': { action: 'ricercapersona/show' },
   'POST /api/v1/ricercapersona/create': { action: 'ricercapersona/create' },
+  'PATCH /api/v1/ricercapersona/update': { action: 'ricercapersona/update' },
   'DELETE /api/v1/ricercapersona/delete': { action: 'ricercapersona/delete' },
   /***************************************************************************
   *                                                                          *
