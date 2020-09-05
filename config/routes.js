@@ -47,6 +47,7 @@ module.exports.routes = {
   'POST /api/v1/ricercapersona/create': { action: 'ricercapersona/create' },
   'PATCH /api/v1/ricercapersona/update': { action: 'ricercapersona/update' },
   'DELETE /api/v1/ricercapersona/delete': { action: 'ricercapersona/delete' },
+  'POST /api/v1/ricercapersona/find-by-id': { action: 'ricercapersona/find-by-id' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
