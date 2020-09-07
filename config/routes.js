@@ -48,6 +48,8 @@ module.exports.routes = {
   'PATCH /api/v1/ricercapersona/update': { action: 'ricercapersona/update' },
   'DELETE /api/v1/ricercapersona/delete': { action: 'ricercapersona/delete' },
   'POST /api/v1/ricercapersona/find-by-id': { action: 'ricercapersona/find-by-id' },
+  // POSIZIONI
+  'POST /api/v1/posizioni/get-latest-unique-positions': { action: 'posizioni/get-latest-unique-positions' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
