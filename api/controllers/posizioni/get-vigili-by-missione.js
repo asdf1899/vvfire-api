@@ -1,14 +1,14 @@
 module.exports = {
 
 
-  friendlyName: 'Get vigili by ricerca',
+  friendlyName: 'Get vigili by missione',
 
 
   description: '',
 
 
   inputs: {
-    fkRicerca: {
+    fkMissione: {
       type: 'number',
       required: true
     }
@@ -24,17 +24,16 @@ module.exports = {
     /*let idVigili = await Posizioni.find(
       {
         where: {
-          fkRicerca: inputs.fkRicerca
+          fkMissione: inputs.fkMissione
         },
         select: ['fkVigile']
       }
     ).distinct(['fkVigile']);
     console.log(idVigili);
     return idVigili;*/
-    /*var SQL = 'SELECT DISTINCT posizioni.fkVigile FROM posizioni WHERE posizioni.fkRicerca = $1 ORDER BY date DESC';
-    var rawResult = await sails.sendNativeQuery(SQL, [inputs.fkRicerca]);
-    return rawResult.rows;*/
-    return inputs;
+    var SQL = 'SELECT DISTINCT posizioni.fkVigile FROM posizioni WHERE posizioni.fkMissione = $1 ORDER BY date DESC';
+    var rawResult = await sails.sendNativeQuery(SQL, [inputs.fkMissione]);
+    return rawResult.rows;
   }
 
 

@@ -50,7 +50,7 @@ module.exports.routes = {
   'POST /api/v1/ricercapersona/find-by-id': { action: 'ricercapersona/find-by-id' },
   // POSIZIONI
   'POST /api/v1/posizioni/get-latest-unique-positions': { action: 'posizioni/get-latest-unique-positions' },
-  'POST /api/v1/posizioni/get-vigili-by-ricerca': { action: 'posizioni/get-vigili-by-ricerca' },
+  'POST /api/v1/posizioni/get-vigili-by-missione': { action: 'posizioni/get-vigili-by-missione' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
