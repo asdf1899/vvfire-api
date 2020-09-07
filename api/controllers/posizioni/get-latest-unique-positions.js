@@ -27,8 +27,28 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    var SQL = 'SELECT * FROM posizioni WHERE posizioni.date > $1 AND posizioni.fkRicerca = $2 GROUP BY posizioni.fkVigile ORDER BY date DESC';
-    var rawResult = await sails.sendNativeQuery(SQL, [inputs.time, inputs.fkRicerca]);
+    console.log(inputs.fkRicerca);
+    /*var sqlIdMissioni = 'SELECT id FROM missione WHERE missione.fkRicerca = $1';
+    var rawIdMissioni = await sails.sendNativeQuery(sqlIdMissioni, [inputs.fkRicerca]);
+    console.log(rawIdMissioni);
+    if (rawIdMissioni === []){
+      return [];
+    }*/
+    let idMissioni = await Missione.find(
+      {
+        where: {
+          fkRicerca: inputs.fkRicerca
+        },
+        select: ['id']
+      }
+    );
+    if (idMissioni.length === 0 || idMissioni === undefined || idMissioni === null){
+      return [];
+    }
+    // restituisce x es 1,4,5
+    var idMissionsMap = idMissioni.map( (el) => { return el.id; });
+    var SQL = 'SELECT * FROM posizioni WHERE posizioni.date > $1 AND posizioni.fkMissione IN ($2) GROUP BY posizioni.fkVigile ORDER BY date DESC';
+    var rawResult = await sails.sendNativeQuery(SQL, [inputs.time, idMissionsMap]);
     return rawResult.rows;
     //let allPositions = await Posizioni.find({
     //  where: {

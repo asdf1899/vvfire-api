@@ -1,5 +1,5 @@
 /**
- * RicercaPersona.js
+ * Missione.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -28,12 +28,12 @@ module.exports = {
       defaultsTo: false,
       allowNull: false
     },
-    missione: {
-      collection: 'Missione',
-      via: 'fkRicerca'
+    fkRicerca:{
+      model: 'RicercaPersona'
     },
-    fkCorpovvf:{
-      model: 'Corpovvf'
+    posizione: {
+      collection: 'Posizioni',
+      via: 'fkMissione'
     }
   },
 

@@ -29,8 +29,8 @@ module.exports = {
     fkVigile: {
       model: 'Vigile'
     },
-    fkRicerca: {
-      model: 'RicercaPersona'
+    fkMissione: {
+      model: 'Missione'
     }
   },
 

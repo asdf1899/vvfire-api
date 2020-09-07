@@ -31,9 +31,10 @@ module.exports = {
     ).distinct(['fkVigile']);
     console.log(idVigili);
     return idVigili;*/
-    var SQL = 'SELECT DISTINCT posizioni.fkVigile FROM posizioni WHERE posizioni.fkRicerca = $1 ORDER BY date DESC';
+    /*var SQL = 'SELECT DISTINCT posizioni.fkVigile FROM posizioni WHERE posizioni.fkRicerca = $1 ORDER BY date DESC';
     var rawResult = await sails.sendNativeQuery(SQL, [inputs.fkRicerca]);
-    return rawResult.rows;
+    return rawResult.rows;*/
+    return inputs;
   }
 
 
