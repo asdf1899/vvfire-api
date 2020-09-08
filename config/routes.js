@@ -51,6 +51,8 @@ module.exports.routes = {
   // POSIZIONI
   'POST /api/v1/posizioni/get-latest-unique-positions': { action: 'posizioni/get-latest-unique-positions' },
   'POST /api/v1/posizioni/get-vigili-by-missione': { action: 'posizioni/get-vigili-by-missione' },
+  // MISSIONE
+  'POST /api/v1/missione/get-missioni-by-ricerca': { action: 'missione/get-missioni-by-ricerca' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
