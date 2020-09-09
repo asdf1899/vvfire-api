@@ -8,7 +8,10 @@ module.exports = {
 
 
   inputs: {
-
+    fkCorpovvf: {
+      type: 'number',
+      required: true
+    }
   },
 
 
@@ -19,7 +22,7 @@ module.exports = {
 
   fn: async function (inputs) {
     let ricerche = await RicercaPersona.find({
-      where: {fkCorpovvf: inputs.idcorpo}
+      where: {fkCorpovvf: inputs.fkCorpovvf}
     });
     if (ricerche === null || ricerche === undefined || ricerche === false || ricerche.length === 0){
       return [{error: '404', message: 'Not Found'}];
