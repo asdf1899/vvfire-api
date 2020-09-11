@@ -54,6 +54,7 @@ module.exports.routes = {
   // MISSIONE
   'POST /api/v1/missione/create': { action: 'missione/create' },
   'POST /api/v1/missione/get-missioni-by-ricerca': { action: 'missione/get-missioni-by-ricerca' },
+  'POST /api/v1/missione/find-by-id': { action: 'missione/find-by-id' },
   'PATCH /api/v1/missione/update': { action: 'missione/update' },
   'DELETE /api/v1/missione/delete': { action: 'missione/delete' },
   /***************************************************************************
