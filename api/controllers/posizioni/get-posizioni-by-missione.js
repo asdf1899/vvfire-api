@@ -24,10 +24,10 @@ module.exports = {
     let posizioni = await Posizioni.find(
       {
         where: {
-          fkMissione: inputs.fkMissione
+          fkMissione: inputs.idMissione
         }
       }
-    ).sort('date DESC');
+    ).sort('date ASC');
     return [{posizioni: posizioni}];
   }
 
