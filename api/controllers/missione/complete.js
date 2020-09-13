@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Update',
+  friendlyName: 'Complete',
 
 
-  description: 'Update missione.',
+  description: 'Complete missione.',
 
 
   inputs: {
@@ -14,10 +14,10 @@ module.exports = {
       unique: true,
       allowNull: false
     },
-    name: {
+    endTime: {
       type: 'string',
+      columnType: 'datetime',
       required: true,
-      allowNull: false
     }
   },
 
@@ -30,7 +30,8 @@ module.exports = {
   fn: async function (inputs) {
     var updateMissione = await Missione.updateOne({ id: inputs.id })
     .set({
-      'name': inputs.name,
+      'completed': true,
+      'endTime': inputs.endTime
     });
     if (updateMissione === null || updateMissione === undefined || updateMissione.length === 0){
       return [{error: '404', message: 'Not Found'}];
