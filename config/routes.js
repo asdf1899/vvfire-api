@@ -48,6 +48,7 @@ module.exports.routes = {
   'PATCH /api/v1/ricercapersona/update': { action: 'ricercapersona/update' },
   'DELETE /api/v1/ricercapersona/delete': { action: 'ricercapersona/delete' },
   'POST /api/v1/ricercapersona/find-by-id': { action: 'ricercapersona/find-by-id' },
+  'PATCH /api/v1/ricercapersona/complete': { action: 'ricercapersona/complete' },
   // POSIZIONI
   'POST /api/v1/posizioni/get-latest-unique-positions': { action: 'posizioni/get-latest-unique-positions' },
   'POST /api/v1/posizioni/get-vigili-by-missione': { action: 'posizioni/get-vigili-by-missione' },
