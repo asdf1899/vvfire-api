@@ -50,6 +50,7 @@ module.exports.routes = {
   'POST /api/v1/ricercapersona/find-by-id': { action: 'ricercapersona/find-by-id' },
   'PATCH /api/v1/ricercapersona/complete': { action: 'ricercapersona/complete' },
   // POSIZIONI
+  'POST /api/v1/posizioni/create': { action: 'posizioni/create' },
   'POST /api/v1/posizioni/get-latest-unique-positions': { action: 'posizioni/get-latest-unique-positions' },
   'POST /api/v1/posizioni/get-vigili-by-missione': { action: 'posizioni/get-vigili-by-missione' },
   'POST /api/v1/posizioni/get-posizioni-by-missione': { action: 'posizioni/get-posizioni-by-missione' },
