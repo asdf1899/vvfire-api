@@ -22,5 +22,8 @@ module.exports.policies = {
   'corpovvf': {
     'create': true,//, // We dont need authorization here, allowing public access
     'login': true // We dont need authorization here, allowing public access
+  },
+  vigile:{
+    login: true
   }
 };

@@ -6,7 +6,7 @@ module.exports = {
   friendlyName: 'Login',
 
 
-  description: 'Login corpovvf.',
+  description: 'Login vigile.',
 
 
   inputs: {
@@ -37,22 +37,25 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    //console.log(inputs);
-    //console.log(inputs.email);
-    var corpo = await Corpovvf.findOne({email: inputs.email});
-    //console.log(corpo);
-    if (corpo === null || corpo === undefined || corpo === false){
-      //throw({notFound: {name: inputs.email, error: 'Corpovvf not found'}});
+    var vigile = await Vigile.findOne({email: inputs.email});
+    if (vigile === null || vigile === undefined || vigile === false){
       return [{error: '401', message: 'Unauthorized'}];
     }
-    if (inputs.password !== corpo.password){
-      //console.log('password errata');
-      //throw ({passwordError: {error: 'Invalid password'}});
+    if (inputs.password !== vigile.password){
       return [{error: '401', message: 'Unauthorized'}];
-
     }
-    let getCorpo = [{ 'id': corpo.id, 'name': corpo.name, 'email': corpo.email, 'phone':corpo.phone}];
-    return [{token: webtoken.sign(corpo), corpovvf: getCorpo, error: false}];
+    let getVigile = [{
+      'id': vigile.id,
+      'name': vigile.name,
+      'surname': vigile.surname,
+      'phone':vigile.phone,
+      'email': vigile.email,
+      'autista': vigile.autista,
+      'admin': vigile.admin,
+      'fkGrado': vigile.fkGrado,
+      'fkCorpovvf': vigile.fkCorpovvf
+    }];
+    return [{token: webtoken.sign(vigile), vigile: getVigile, error: false}];
   }
 
 
